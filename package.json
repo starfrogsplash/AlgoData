@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "compile": "tsc",
     "start": "ts-node algorithms/fourNumberSum/fourNumberSum.ts"
   },
