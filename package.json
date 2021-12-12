@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "compile": "tsc",
     "start": "ts-node algorithms/fourNumberSum/fourNumberSum.ts"
   },
   "jest": {

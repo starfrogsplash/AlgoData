@@ -24,6 +24,10 @@ const fourNumberSum = (array: Array<number>, targetSum: number) => {
         }
     return quadrulpets
     }
+
+    const result = fourNumberSum([7, 6, 4, -1, 1, 2], 16)
+
+console.log('result===', result)
         
     export {
         fourNumberSum
