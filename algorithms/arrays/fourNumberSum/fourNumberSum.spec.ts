@@ -1,4 +1,4 @@
-import { fourNumberSum } from "../fourNumberSum";
+import { fourNumberSum } from "./fourNumberSum";
 
 
 it('returns correct data', ()=> {

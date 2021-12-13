@@ -1,4 +1,4 @@
-import { MinMaxStack } from "../MinMaxStack";
+import { MinMaxStack } from "./MinMaxStack";
 
 it('returns max value, and inserts stack correctly', ()=> {
     const minMaxStack =  new MinMaxStack()
