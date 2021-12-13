@@ -1,4 +1,4 @@
-import { Node, DoublyLinkedList } from "./LinkedListConstruction";
+import { Node, DoublyLinkedList } from "./DoublyLinkedList";
 
 it('constructs a doubly linkedList', () => {
     const dLinkedList = new DoublyLinkedList()
