@@ -22,17 +22,20 @@ const nthFibRec = (num: number): number => {
 // iterative
 //O(n) time O(1) space
 const iterativeFib = (num: Number): Number => {
-    const currentFib = [0, 1]
+
+    let prev = 0
+    let current = 1
+    // const currentFib = [0, 1]
     let counter = 3
 
     while (counter <= num) {
-        const nextFib = currentFib[0] + currentFib[1]
-        currentFib[0] = currentFib[1]
-        currentFib[1] = nextFib
+        const nextFib = prev + current
+        prev = current
+        current = nextFib
         counter++
     }
 
-    return num > 1 ? currentFib[1] : currentFib[0]
+    return current
 }
 
 export {
