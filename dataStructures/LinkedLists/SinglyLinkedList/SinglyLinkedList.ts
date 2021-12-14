@@ -19,7 +19,7 @@ class SinglyLinkedList {
 
     insert(value: any) {
         this.length++;
-        let node = new Node(value); // or use new Node(value);
+        let node = new Node(value);
     
         if (this.tail) {
           this.tail.next = node;
