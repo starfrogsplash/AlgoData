@@ -17,9 +17,11 @@ const pathFinder = (path: any, target: string, prefix= ''): string | null => {
 
     return result
 }
-  
 
-// const pathFinder = (path: any, target: string): any => Object.entries(path).reduce((accum, [key,node]) => typeof node === 'object' ? `${accum}.${key}${pathFinder(node, target)}` : node === target ? `${accum}.${key}.${node}` : accum, ''); 
+
+// const pathFinder = (path: any, target: string): any =>
+//     Object.entries(path).reduce((accum, [key, node]) =>
+//         typeof node === 'object' ? `${accum}${pathFinder(node, target)}` : node === target ? `${accum}.${key}.${node}` : accum, '');
 
 export {
     pathFinder

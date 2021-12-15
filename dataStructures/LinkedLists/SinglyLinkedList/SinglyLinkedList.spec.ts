@@ -10,8 +10,8 @@ it('returns correct values for SinglyLinkedList', () => {
     linkedList.insertHead(9)
 
 
-    expect(linkedList.head.value).toEqual(9)
-    expect(linkedList.tail.value).toEqual(8)
+    expect(linkedList.head?.value).toEqual(9)
+    expect(linkedList.tail?.value).toEqual(8)
 
 
 })

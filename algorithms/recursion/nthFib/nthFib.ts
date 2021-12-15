@@ -12,6 +12,11 @@ const nthFibRec = (num: number): number => {
     return fibA + fibB
 }
 
+//fib4      // fib3
+//fib3      //   0
+//fib2 = 1  //   ?
+
+
 
 //                    example nth(4)
 // fib(4) = fib(3) + fib(2) + fib(1) =>  1 + 1 + 0 = 2

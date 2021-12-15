@@ -1,6 +1,6 @@
 class Node {
     value: any
-    next: any
+    next: Node | null
     constructor(value: any) {
         this.value = value
         this.next = null
@@ -8,8 +8,8 @@ class Node {
 }
 
 class SinglyLinkedList {
-    head: any
-    tail: any
+    head: Node | null
+    tail: Node | null
     length: number
     constructor() {
         this.head = null
@@ -17,7 +17,7 @@ class SinglyLinkedList {
         this.length = 0
     }
 
-    insert(value: any) {
+    insert(value: string | number) {
         this.length++;
         let node = new Node(value);
     
@@ -31,7 +31,7 @@ class SinglyLinkedList {
         return node;
       }
 
-    insertHead(value: any) {
+    insertHead(value: string | number) {
         this.length++
         let node = new Node(value)
 
@@ -63,8 +63,8 @@ class SinglyLinkedList {
 
             let currentNode = this.head
 
-            while (currentNode.next != tailNode) {
-                currentNode = currentNode.next
+            while (currentNode?.next != tailNode) {
+                currentNode = currentNode?.next || null
             }
             const beforeTail = currentNode
             this.tail = beforeTail
@@ -85,7 +85,7 @@ class SinglyLinkedList {
 
     // insert at specific index
 
-    insertIndex(value: any, index: number) {
+    insertIndex(value: string | number, index: number) {
         if (index >= this.length) {
             throw new Error("Insert index out of bounds");
         }
@@ -99,11 +99,11 @@ class SinglyLinkedList {
         let currentNode = this.head;
         for (let i = 0; i < index; i++) {
             previousNode = currentNode;
-            currentNode = currentNode.next;
+            currentNode = currentNode?.next || null;
         }
         const newNode = new Node(value);
         newNode.next = currentNode;
-        previousNode.next = newNode;
+        if (previousNode) previousNode.next = newNode;
         return newNode;
     }
 
@@ -123,9 +123,9 @@ class SinglyLinkedList {
         let currentNode = this.head;
         for (let i = 0; i < index; i++) {
             previousNode = currentNode;
-            currentNode = currentNode.next;
+            currentNode = currentNode?.next || null;
         }
-        previousNode.next = currentNode.next;
+        if (previousNode) previousNode.next = currentNode?.next || null ;
         return currentNode;
     }
 }
