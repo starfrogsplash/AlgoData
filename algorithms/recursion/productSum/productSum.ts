@@ -1,6 +1,6 @@
+type NestedArray = (number|NestedArray)[]
 
-
-const productSum = (array: any, multiplier: number): number => {
+const productSum = (array: NestedArray, multiplier = 1): number => {
     let sum = 0
 
     for (let element of array){
@@ -9,7 +9,6 @@ const productSum = (array: any, multiplier: number): number => {
         } else {
             sum+=element
         }
-        
     }
     
     return sum * multiplier
