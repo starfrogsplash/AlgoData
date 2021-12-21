@@ -1,11 +1,13 @@
 
 
 const findTwoNumberSumTarget = (arr: number[], target: number) => {
+    const sortedArr = arr.sort()
+
     let left = 0
-    let right = arr.length - 1
+    let right = sortedArr.length - 1
 
     while (left < right) {
-        let currentSum = arr[left] + arr[right]
+        let currentSum = sortedArr[left] + sortedArr[right]
         if (currentSum < target) left++
         if (currentSum > target) right--
         if (currentSum === target) return true
