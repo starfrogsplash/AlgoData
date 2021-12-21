@@ -33,19 +33,24 @@ const traverseNode = (curRowIdx: number, curColidx: number, matrix: number[][], 
 
 const getUnvistedNeighbours = (curRowIdx: number, curColidx: number, matrix: number[][], visited: boolean[][]) => {
     const unvistedNeighbours: number[][] = []
+
+    const bottomRow = matrix.length - 1
+    const width = matrix[0].length - 1
+    
     const above = [curRowIdx - 1, curColidx]
     const below = [curRowIdx + 1, curColidx]
     const right = [curRowIdx, curColidx + 1]
-    const left = [curRowIdx, curColidx - 1]
+    const left = [curRowIdx, curColidx - 1] 
+
     const visitedAbove = visited[curRowIdx - 1] ? visited[curRowIdx - 1][curColidx] : undefined
     const visitedBelow = visited[curRowIdx + 1] ? visited[curRowIdx + 1][curColidx] : undefined
     const visitedLeft = visited[curRowIdx][curColidx - 1]
     const visitedRight = visited[curRowIdx][curColidx + 1]
 
     if (curRowIdx > 0 && !visitedAbove) unvistedNeighbours.push(above)
-    if (curRowIdx < matrix.length - 1 && !visitedBelow) unvistedNeighbours.push(below)
+    if (curRowIdx < bottomRow && !visitedBelow) unvistedNeighbours.push(below)
     if (curColidx > 0 && !visitedLeft) unvistedNeighbours.push(left)
-    if (curColidx < matrix[0].length - 1 && !visitedRight) unvistedNeighbours.push(right)
+    if (curColidx < width && !visitedRight) unvistedNeighbours.push(right)
     return unvistedNeighbours
 }
 
