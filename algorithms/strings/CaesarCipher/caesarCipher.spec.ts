@@ -8,7 +8,7 @@ describe('shifts letters by k', () => {
 
     })
 
-    fit('returns ZAB', () => {
+    it('returns ZAB', () => {
         expect(caesarCipher('XYZ', 2)).toEqual('ZAB');
 
     })
