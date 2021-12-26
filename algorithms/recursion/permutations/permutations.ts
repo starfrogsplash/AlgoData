@@ -20,7 +20,14 @@ const permutationsHelper = (array: number[], currentPermutation: number[], permu
     }
 } 
 
-//[1,2]
+// [1,2,3]
+// [2,3], [1] => [2,3], [1] []
+// [3] , [2] => [3], [2] [1,2]
+// [], [3] => [], [3] [123]
+
+
+
+//[3]
 
 export {
     permutations
