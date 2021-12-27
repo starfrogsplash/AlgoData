@@ -36,7 +36,7 @@ const getUnvistedNeighbours = (curRowIdx: number, curColidx: number, matrix: num
 
     const bottomRow = matrix.length - 1
     const width = matrix[0].length - 1
-    
+
     const above = [curRowIdx - 1, curColidx]
     const below = [curRowIdx + 1, curColidx]
     const right = [curRowIdx, curColidx + 1]

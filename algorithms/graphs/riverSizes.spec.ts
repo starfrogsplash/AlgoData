@@ -2,7 +2,7 @@ import {riverSizes} from './riverSizes'
 
 
 
-it('returns 2 rivers of length 2 & 3', () => {
+fit('returns 2 rivers of length 2 & 3', () => {
 
     const matrix = [
         [1,0,0,1,0],
