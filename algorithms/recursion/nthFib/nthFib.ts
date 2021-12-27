@@ -26,7 +26,7 @@ const nthFibRec = (num: number): number => {
 
 // iterative
 //O(n) time O(1) space
-const iterativeFib = (num: Number): Number => {
+const iterativeFib = (num: number): number => {
 
     let prev = 0
     let current = 1

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --watch",
     "compile": "tsc",
-    "start": "ts-node algorithms/fourNumberSum/fourNumberSum.ts"
+    "start": "ts-node algorithms/fourNumberSum/fourNumberSum.ts",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "jest": {
     "preset": "ts-jest",
@@ -18,9 +19,12 @@
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^8.5.0",
     "jest": "^27.3.1",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.2"
+    "typescript": "^4.5.4"
   }
 }

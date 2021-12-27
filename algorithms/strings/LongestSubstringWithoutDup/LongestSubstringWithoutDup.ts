@@ -36,7 +36,7 @@ const longestSubstring = (str: string): string => {
   const charIndices: Record<string, number> = {}
 
   while (endWindow < str.length) {
-    let currChar = str[endWindow];
+    const currChar = str[endWindow];
 
     if (typeof charIndices[currChar] === 'number' && charIndices[currChar] >= startWindow) {
       // "Jump" p1 to location of the duplicate character to put it on the "edge" of the window.

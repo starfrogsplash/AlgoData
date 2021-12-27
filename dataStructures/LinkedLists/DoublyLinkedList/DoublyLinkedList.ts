@@ -1,7 +1,7 @@
 class Node {
     next: any
     previous: any
-    constructor(value: any) {
+    constructor(value: string | number) {
       value = value,
       this.next = null,
       this.previous =null
@@ -20,7 +20,7 @@ class Node {
   
     insert(value: any) {
       this.length++;
-      let newNode = new Node(value);
+      const newNode = new Node(value);
   
       if (this.tail) {
         this.tail.next = newNode;
@@ -66,7 +66,7 @@ class Node {
   
     insertHead(value: any) {
       this.length++;
-      let newNode = new Node(value);
+      const newNode = new Node(value);
   
       if (this.head) {
         this.head.previous = newNode;

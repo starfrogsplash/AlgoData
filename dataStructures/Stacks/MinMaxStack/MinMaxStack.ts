@@ -1,7 +1,7 @@
 
 class MinMaxStack {
-    minMaxStack: Array<any>;
-    stack: Array<any>
+    minMaxStack: { max: number; min: number; }[];
+    stack: number[]
 
     constructor() {
         this.minMaxStack = [];

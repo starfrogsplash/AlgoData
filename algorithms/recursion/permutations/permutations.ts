@@ -1,7 +1,7 @@
 
 
 const permutations = (array: number[] ): number[][] => {
-    const permutations: any[] = []
+    const permutations: number[][] = []
     permutationsHelper(array, [], permutations)
     return permutations
 }

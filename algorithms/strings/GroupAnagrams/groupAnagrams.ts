@@ -1,8 +1,8 @@
 const groupAnagrams = (anagrams: string[]) => {
     const anagramsObj: Record<string, string[]> = {}
 
-     for (let word of anagrams){
-        let sortedWord = word.split('').sort().join('')
+     for (const word of anagrams){
+        const sortedWord = word.split('').sort().join('')
         if(anagramsObj[sortedWord]){
             anagramsObj[sortedWord].push(word)
         }else{

@@ -1,10 +1,12 @@
+// type ObjectType<T> = Record<string, T>
 
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const pathFinder = (path: any, target: string, prefix= ''): string | null => {
 
     let result = null
 
-    for (let key in path) {
+    for (const key in path) {
         if (typeof path[key] === 'object'){
             result =  pathFinder(path[key], target, prefix ? `${prefix}.${key}` : `${key}`)
 

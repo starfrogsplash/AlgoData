@@ -1,7 +1,7 @@
 class Node {
-    value: any
+    value: string | number
     next: Node | null
-    constructor(value: any) {
+    constructor(value: string | number) {
         this.value = value
         this.next = null
     }
@@ -19,7 +19,7 @@ class SinglyLinkedList {
 
     insert(value: string | number) {
         this.length++;
-        let node = new Node(value);
+        const node = new Node(value);
     
         if (this.tail) {
           this.tail.next = node;
@@ -33,7 +33,7 @@ class SinglyLinkedList {
 
     insertHead(value: string | number) {
         this.length++
-        let node = new Node(value)
+        const node = new Node(value)
 
         if (this.head) {
             node.next = this.head

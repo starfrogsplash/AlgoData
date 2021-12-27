@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const riverSizes = (matrix: number[][]): number[] => {
     const sizes: number[] = []
-    const visited = matrix.map(curRowIdx => curRowIdx.map(value => false))
+
+    // eslint-disable-next-line no-unused-vars
+    const visited = matrix.map(curRowIdx => curRowIdx.map(_ => false))
     for (let curRowIdx = 0; curRowIdx < matrix.length; curRowIdx++) {
         for (let curColidx = 0; curColidx < matrix[curRowIdx].length; curColidx++) {
             if (visited[curRowIdx][curColidx]) continue

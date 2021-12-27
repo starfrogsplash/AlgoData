@@ -4,7 +4,7 @@ interface addresses {
 }
 
 const mergeDuplicates = (addresses: addresses[]) => {
-    let entries: addresses[] = []
+    const entries: addresses[] = []
     addresses.forEach(record => {
         let duplicate = entries.find(res => res.name === record.name)
         if(duplicate){
