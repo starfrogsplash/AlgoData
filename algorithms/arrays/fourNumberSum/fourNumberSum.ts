@@ -8,7 +8,7 @@ const fourNumberSum = (array: Array<number>, targetSum: number) => {
                 const difference = targetSum - currentSum
                 if (difference in allPairSums){
                     for (const pair of allPairSums[difference]){
-                        quadrulpets.push(pair.concat([array[i], array[j]]))
+                        quadrulpets.push([...pair, ...[array[i], array[j]]])
                     }
                 }
             }

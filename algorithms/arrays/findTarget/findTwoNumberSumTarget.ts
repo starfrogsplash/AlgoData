@@ -1,7 +1,6 @@
 
 const findTwoNumberSumTarget = (arr: number[], target: number) => {
     const sortedArr = arr.sort()
-
     let left = 0
     let right = sortedArr.length - 1
 
