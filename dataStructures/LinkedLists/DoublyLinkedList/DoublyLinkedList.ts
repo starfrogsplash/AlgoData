@@ -1,8 +1,10 @@
 class Node {
-    next: any
-    previous: any
+    next: null
+    previous: null
+    value: string | number
     constructor(value: string | number) {
-      value = value,
+      // eslint-disable-next-line no-self-assign
+      this.value = value,
       this.next = null,
       this.previous =null
     }
@@ -18,7 +20,7 @@ class Node {
       this.length = 0;
     }
   
-    insert(value: any) {
+    insert(value: string | number) {
       this.length++;
       const newNode = new Node(value);
   
@@ -64,7 +66,7 @@ class Node {
   
     // Insert node from the head instead of the tail
   
-    insertHead(value: any) {
+    insertHead(value: number) {
       this.length++;
       const newNode = new Node(value);
   
@@ -97,7 +99,7 @@ class Node {
   
     // insert at specific index
   
-    insertIndex(value: any, index: number) {
+    insertIndex(value: number, index: number) {
       if (index >= this.length) {
         throw new Error("Insert index out of bounds");
       }
