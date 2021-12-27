@@ -6,8 +6,10 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
-    "no-unused-vars": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
   },
+
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',

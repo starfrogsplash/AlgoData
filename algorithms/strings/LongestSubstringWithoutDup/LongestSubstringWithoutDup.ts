@@ -15,6 +15,7 @@ const LongestSubstringWithoutDup = (str: string): string => {
       // longest = [startIdx, i + 1]
       firstIdx = startIdx
       lastIdx = i + 1
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       longestSofar = str.slice(startIdx, lastIdx)
     }
 
