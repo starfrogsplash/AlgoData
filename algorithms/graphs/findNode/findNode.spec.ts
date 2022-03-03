@@ -16,7 +16,7 @@ class graphNode {
 }
 
 
-fit('returns F node found in graph', () => {
+it('returns F node found in graph', () => {
 
     const graph = new graphNode('A')
 
@@ -24,7 +24,7 @@ fit('returns F node found in graph', () => {
     graph.children[0].addChild("E").addChild("F");
 
     const tree = JSON.stringify(graph, null, 2)
-    console.log('graph===', tree)
+    // console.log('graph===', tree)
 
     const response = {
         "name": "A",

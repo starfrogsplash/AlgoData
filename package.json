@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --watch",
     "compile": "tsc",
-    "start": "ts-node algorithms/fourNumberSum/fourNumberSum.ts",
+    "start": "ts-node algorithms/arrays/seperateDuplicates/seperateDuplicates.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "jest": {

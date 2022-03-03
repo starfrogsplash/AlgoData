@@ -7,7 +7,7 @@ const validSubsequence = (array: number[], seq: number[]) => {
         if(seq[seqIdx] === value) seqIdx++
     }
 
-    return true
+    return seqIdx === seq.length
 }
 
 const validSubsequenceB = (array: number[], seq: number[]) => {
