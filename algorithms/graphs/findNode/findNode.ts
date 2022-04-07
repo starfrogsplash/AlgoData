@@ -1,4 +1,3 @@
-import { setUncaughtExceptionCaptureCallback } from "process";
 
 class GraphNode {
     name: string

@@ -1,6 +1,6 @@
 
 
-//O(n) time || 0(1)
+//O(n) time || 0(n) space
 const seperateUnique = (arr1: string[], arr2: string[]) => {
   const objA: Record<string, boolean> = {}
   const objB: Record<string, boolean> = {}

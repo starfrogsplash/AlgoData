@@ -14,6 +14,8 @@ const findTwoNumberSumTarget = (arr: number[], target: number) => {
     return false
 }
 
+// console.log(findTwoNumberSumTarget([1,2,4,4], 8))
+
 export {
     findTwoNumberSumTarget
 }
